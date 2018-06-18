@@ -1,0 +1,15 @@
+response.css('div.panel-body p.cuisine span::text').extract()   ---> Serving Cuisines
+
+response.css('div.panel-body p a::text')[0].extract()   ---> Date and Time
+
+response.css('div.panel-body ul.list-unstyled a::text')[0].extract()   ---> Telephone number
+
+response.css('div.panel-body p.price-range span::text')[0].extract()   ---> Price Range
+
+Cruisine=response.css('div.panel-heading h1.panel-title::text').extract_first()   ---> Title
+
+response.css('div.panel-heading span::text').extract()   ---> Address
+
+response.css('div.description-info p::text').extract()   ---> Description
+
+response.css('div.reviewScore span.rating-total::text').extract()   ---> Rating out of 5
