@@ -30,6 +30,5 @@ class FindRestaurant(scrapy.Spider):
             'near_by_restaurants': response.css('#nearbyList li.media a::text')[:-1].extract(),
             'rating': extract_with_css('span.rating-total::text'),
             'no_of_reviews': extract_with_css('#review-count::text'),
-            ''
         }
 
