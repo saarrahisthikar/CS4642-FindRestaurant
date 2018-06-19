@@ -28,5 +28,8 @@ class FindRestaurant(scrapy.Spider):
             'open_hours': extract_with_css('#openHours::text'),
             'price_range': extract_with_css('div.panel-body p.price-range span::text'),
             'near_by_restaurants': response.css('#nearbyList li.media a::text')[:-1].extract(),
+            'rating': extract_with_css('span.rating-total::text'),
+            'no_of_reviews': extract_with_css('#review-count::text'),
+            ''
         }
 
